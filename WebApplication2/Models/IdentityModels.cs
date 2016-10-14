@@ -16,6 +16,8 @@ namespace WebApplication2.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Organization { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -29,5 +31,7 @@ namespace WebApplication2.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebApplication2.Models.Item> Items { get; set; }
     }
 }

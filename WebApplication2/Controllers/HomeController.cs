@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace WebApplication2.Controllers
 {
@@ -10,19 +11,20 @@ namespace WebApplication2.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index",
+                new RouteValueDictionary(new { controller = "Items", action = "Index"}));
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "My \"Mini Warehouse\" Implementation.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Creator";
 
             return View();
         }

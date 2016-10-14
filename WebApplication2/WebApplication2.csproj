@@ -169,12 +169,35 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610121858593_InitialCreate.cs" />
+    <Compile Include="Migrations\201610121858593_InitialCreate.Designer.cs">
+      <DependentUpon>201610121858593_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610131723357_AddedOrganization.cs" />
+    <Compile Include="Migrations\201610131723357_AddedOrganization.Designer.cs">
+      <DependentUpon>201610131723357_AddedOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610131916127_Added-user-name.cs" />
+    <Compile Include="Migrations\201610131916127_Added-user-name.Designer.cs">
+      <DependentUpon>201610131916127_Added-user-name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610132124003_Changed-Item.Tite_to_Item.Title.cs" />
+    <Compile Include="Migrations\201610132124003_Changed-Item.Tite_to_Item.Title.Designer.cs">
+      <DependentUpon>201610132124003_Changed-Item.Tite_to_Item.Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610132146428_Added_Amount_field_to_Item_Model.cs" />
+    <Compile Include="Migrations\201610132146428_Added_Amount_field_to_Item_Model.Designer.cs">
+      <DependentUpon>201610132146428_Added_Amount_field_to_Item_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -200,7 +223,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -234,6 +259,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +275,23 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610121858593_InitialCreate.resx">
+      <DependentUpon>201610121858593_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610131723357_AddedOrganization.resx">
+      <DependentUpon>201610131723357_AddedOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610131916127_Added-user-name.resx">
+      <DependentUpon>201610131916127_Added-user-name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610132124003_Changed-Item.Tite_to_Item.Title.resx">
+      <DependentUpon>201610132124003_Changed-Item.Tite_to_Item.Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610132146428_Added_Amount_field_to_Item_Model.resx">
+      <DependentUpon>201610132146428_Added_Amount_field_to_Item_Model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
